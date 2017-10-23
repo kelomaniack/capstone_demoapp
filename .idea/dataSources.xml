@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails capstone_demoapp: test" uuid="d0dc4f1c-1840-4ce5-bd82-2bd87da3762e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://&lt;%= ENV['POSTGRES_HOST'] %&gt;/capstone_demoapp_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails capstone_demoapp: development" uuid="a10aacbe-bc5b-4215-a1d9-a212587af986">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://&lt;%= ENV['POSTGRES_HOST'] %&gt;/capstone_demoapp_development</jdbc-url>
+    </data-source>
+  </component>
+</project>
