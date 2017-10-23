@@ -16,5 +16,5 @@ group :development, :test do
 	gem 'rspec-rails', '~> 3.5', '>=3.5.2'
 end
 
-gem 'pg', '~>0.19', '>=0.19.0'
+gem 'pg', '~>0.20.0', '>=0.20.0'
 gem 'mongoid', '~>5.1', '>=5.1.5'
