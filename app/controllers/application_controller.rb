@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::API
-	include ActionView::Rendering
+  #make the connection between controller action and associated view
+  include ActionController::ImplicitRender
 end

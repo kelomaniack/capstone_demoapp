@@ -39,11 +39,11 @@ class FoosController < ApplicationController
 
   private
 
-  def set_foo
-    @foo = Foo.find(params[:id])
-  end
+    def set_foo
+      @foo = Foo.find(params[:id])
+    end
 
-  def foo_params
-    params.require(:foo).permit(:name)
-  end
+    def foo_params
+      params.require(:foo).permit(:name)
+    end
 end
