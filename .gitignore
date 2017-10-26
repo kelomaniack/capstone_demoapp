@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 
+<<<<<<< HEAD
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -22,3 +23,13 @@
 /bower_components
 /node_modules
 
+=======
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+>>>>>>> 44b6da37d30c0392230b0d99c9c96663a2e9e5ae
