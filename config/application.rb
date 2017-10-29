@@ -38,7 +38,7 @@ module Myapp
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins '*'
+        origins 'https://git.heroku.com/boiling-wildwood-29288.git'
 
         resource '/api/*', 
           :headers => :any, 
