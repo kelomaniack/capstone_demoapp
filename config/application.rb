@@ -38,7 +38,7 @@ module Myapp
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins /https:\/\/\w+\.github\.io/
+        origins '*'
 
         resource '/api/*', 
           :headers => :any, 
