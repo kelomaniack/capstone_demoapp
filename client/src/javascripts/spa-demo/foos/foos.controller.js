@@ -51,7 +51,7 @@
 		function update() {
 			// console.log("update", vm.foo);
 			vm.foo.$update()
-				.then(function(response) {k
+				.then(function(response) {
 					// console.log(response);
 				})
 				.catch(handleError)
