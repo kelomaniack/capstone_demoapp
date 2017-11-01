@@ -25,6 +25,7 @@ group :development, :test do
   gem 'httparty', '~>0.14', '>=0.14.0'
 
   gem 'rspec-rails', '~> 3.5', '>=3.5.2'
+  gem 'mongoid-rspec','~> 3.0', '>=3.0.0'
 end
 
 group :production do
@@ -34,6 +35,7 @@ end
 gem 'pg', '~>0.19', '>=0.19.0'
 gem 'puma', '~>3.6', '>=3.6.0', :platforms=>:ruby
 gem 'mongoid', '~>5.1', '>=5.1.5'
+gem 'database_cleaner', '~>1.5', '>=1.5.3'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '~>3.3', '>= 3.3.7'
