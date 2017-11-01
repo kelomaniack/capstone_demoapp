@@ -8,8 +8,8 @@ FactoryGirl.define do
   	sequence(:name) {|n| "test#{n}" }
   end
 
-  factory :foo_names, class: 'Foo' do
-  	sequence(:name) {|n| ["larry", "moe", "curly"][n%3]}
+  factory :foo_faker, class: 'Foo' do
+    name { Faker::Name.name }
   end
 
   factory :foo_transient, class: 'Foo' do
@@ -28,6 +28,9 @@ FactoryGirl.define do
       hash {}
     end
     initialize_with { Foo.new(hash) }
+  end
+
+  factory :foo, :parent=>:foo_faker do
   end
 
 end
