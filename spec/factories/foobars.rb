@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory :foo_fixed, class: 'Foo' do
     name "test"
   end
@@ -12,6 +13,7 @@ FactoryGirl.define do
   end
 
   factory :foo_transient, class: 'Foo' do
+    name "test"
   	transient do
   		male true
   	end
@@ -20,4 +22,12 @@ FactoryGirl.define do
   		object.name  = props.male ? "Mr Test" : "Ms Test"
   	end
   end
+
+  factory :foo_ctor, class: 'Foo' do
+    transient do
+      hash {}
+    end
+    initialize_with { Foo.new(hash) }
+  end
+
 end
