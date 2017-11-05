@@ -94,7 +94,7 @@ RSpec.describe "Foo API", type: :request do
   			expect(response).to have_http_status(:no_content)
 
   			head foo_path(foo.id)
-  			expect(response).to have_http_status(:not_found)
+  			expect(response).to have_http_status(:not_foundk)
   		end
   	end
 end
