@@ -51,11 +51,50 @@ RSpec.describe "Foo API", type: :request do
   	end
 
   	context "create a new Foo" do
-  		it "can create with provided name"
+  		let(:foo_state) { FactoryGirl.attributes_for(:foo) }
+  		it "can create with provided name" do
+			jpost foos_path, foo_state
+			#pp parsed_body
+  			expect(response).to have_http_status(:created)
+  			expect(response.content_type).to eq("application/json")
+  		
+
+  			# check the payload of the response
+  			payload = parsed_body
+  			expect(payload).to have_key("id")
+  			expect(payload).to have_key("name")
+  			expect(payload["name"]).to eq(foo_state[:name])
+  			id = payload["id"]
+
+  			# verify we can locate the created instance in DB
+  			expect(Foo.find(id).name).to eq(foo_state[:name])
+  		end
   	end
 
-  	context "existing Food" do
-  		it "can update name"
-  		it "can be deleted"
+  	context "existing Foo" do
+  		let(:foo) { FactoryGirl.create(:foo)}
+  		let(:new_name) { "testing" }
+
+  		it "can update name" do 
+  			#verify name is not yet the new name
+  			expect(foo.name).to_not eq(new_name)
+
+  			#change to the new name
+  			jput foo_path(foo.id), {:name=>new_name}
+  			expect(response).to have_http_status(:no_content)
+
+  			#verify we can locate the created instance in DB
+  			expect(Foo.find(foo.id).name).to eq(new_name)
+  		end
+  		it "can be deleted" do
+  			head foo_path(foo.id)
+  			expect(response).to have_http_status(:ok)
+
+  			delete foo_path(foo.id)
+  			expect(response).to have_http_status(:no_content)
+
+  			head foo_path(foo.id)
+  			expect(response).to have_http_status(:not_found)
+  		end
   	end
 end

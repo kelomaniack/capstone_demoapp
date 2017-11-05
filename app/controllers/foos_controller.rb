@@ -1,12 +1,14 @@
 class FoosController < ApplicationController
   before_action :set_foo, only: [:show, :update, :destroy]
-
+  wrap_parameters :foo
+  wrap_parameters :foo, include: ["name"]
+  
   def index
     @foos = Foo.all
     #render json: @foos
   end
 
-  def show
+  def showk
     #render json: @foo
   end
 
