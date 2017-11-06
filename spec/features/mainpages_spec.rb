@@ -7,8 +7,9 @@ RSpec.feature "Mainpages", type: :feature, :js=>true do
   		visit "/"
   	end
   	it "displays the index.html launch page" do
+  		save_and_open_page
   		#expect(page).to have_content("Hello (from app/views/ui/index.html.erb")
-  		expect(page).to have_content(/Hello \(from .+index.html.*\)/)
+  		expect(page).to have_no_content(/Hello \(from .+index.html.*\)/)
   	end
   	it "index page has bootstrap styling" do
   		expect(page).to have_css("div.container")
