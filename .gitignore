@@ -22,7 +22,7 @@
 /client/build
 /bower_components
 /node_modules
-
+/coverage
 =======
 # Ignore the default SQLite database.
 /db/*.sqlite3
