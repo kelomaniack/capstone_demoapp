@@ -38,25 +38,26 @@ module Myapp
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins '*'
+        origins /https:\/\/\w+\.github\.io/
 
         resource '/api/*', 
           :headers => :any, 
           :methods => [:get, :post, :put, :delete, :options]
       end
     end
+
     config.generators do |g|
-	    g.test_framework :rspec,
-    		:model_specs => true,
-		:routing_specs => false,
-		:controller_specs => false,
-		:helper_specs => false,
-		:view_specs => false,
-		:request_specs => true,
-		:policy_specs => false,
-		:feature_specs => true
-	    
+      g.test_framework :rspec,
+        :model_specs => true,
+        :routing_specs => false,
+        :controller_specs => false,
+        :helper_specs => false,
+        :view_specs => false,
+        :request_specs => true,
+        :policy_specs => false,
+        :feature_specs => true
     end
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
   end

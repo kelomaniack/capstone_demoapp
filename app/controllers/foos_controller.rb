@@ -1,19 +1,18 @@
 class FoosController < ApplicationController
   before_action :set_foo, only: [:show, :update, :destroy]
-  wrap_parameters :foo
   wrap_parameters :foo, include: ["name"]
-  
+
   def index
     @foos = Foo.all
     #render json: @foos
   end
 
-  def showk
+  def show
     #render json: @foo
   end
 
   def create
-    sleep 2.5
+    #sleep 2.5
     @foo = Foo.new(foo_params)
 
     if @foo.save

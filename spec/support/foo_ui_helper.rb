@@ -7,10 +7,12 @@ module FooUiHelper
     expect(page).to have_css("h3", text:"Foos") #on the Foos page
     within(:xpath,FOO_FORM_XPATH) do
       fill_in("name", :with=>foo_state[:name])
-      click_button("Create Foo", :disabled=>false)
+      click_button("Create Foo")
     end
     within(:xpath,FOO_LIST_XPATH) do
-    	expect(page).to have_css("li a",:text=>foo_state[:name])
+      using_wait_time 5 do
+        expect(page).to have_css("li a",:text=>foo_state[:name])
+      end
     end
   end
 
@@ -21,7 +23,6 @@ module FooUiHelper
       find("a",:text=>existing_name).click
     end
     within(:xpath,FOO_FORM_XPATH) do
-      find_field("name", :readonly=>false, :wait=>5)
       fill_in("name", :with=>new_name)
       click_button("Update Foo")
     end
@@ -40,4 +41,4 @@ module FooUiHelper
       expect(page).to have_no_css("li a",:text=>name)
     end
   end
-end  
+end
