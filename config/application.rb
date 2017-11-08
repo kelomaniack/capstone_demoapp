@@ -40,9 +40,10 @@ module Myapp
       allow do
         origins /https:\/\/\w+\.github\.io/
 
-        resource '/api/*', 
+        resource '*', 
           :headers => :any, 
-          :methods => [:get, :post, :put, :delete, :options]
+          :expose => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+	  :methods => [:get, :post, :put, :delete, :options]
       end
     end
 
