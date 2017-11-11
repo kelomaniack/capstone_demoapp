@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :images, except: [:new, :edit]
   get 'authn/whoami'
   get 'authn/checkme'
 
