@@ -16,10 +16,18 @@
         service.getCurrentUser = getCurrentUser;
         service.getCurrentUserName = getCurrentUserName;
         service.login = login;
+        service.logout = logout;
 
+        activate();
         return;
         ////////////////
-
+        function activate() {
+            $auth.validateUser().then(
+                function(user) {
+                    service.user = user;
+                    console.log("validated user", user);
+                });
+        }
         function signup(registration) {
         	return  $auth.submitRegistration(registration);
         }
@@ -50,6 +58,23 @@
                 });
 
             result;
+        }
+
+        function logout() {
+            console.log("logout");
+            var result=$auth.signOut();
+            result.then(
+                
+                function(response){
+                    service.user = null;
+                    console.log("logout complete", response);
+                },
+                function(response){
+                    service.user = null;
+                    console.log("logout failure", response);
+                    alert(response.status + ":" + response.statusText);            
+                });
+            return result;
         }
   }
 })();

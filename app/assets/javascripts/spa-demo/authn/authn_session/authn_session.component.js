@@ -48,7 +48,7 @@
         function(){
           vm.dropdown.removeClass("open");
         });
-    }    
+    }     
 
   }
 
