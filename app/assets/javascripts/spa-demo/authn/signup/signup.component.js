@@ -25,6 +25,7 @@
     	///////////////
     	function signup() {
     		console.log("signup...");
+            $scope.signup_form.$setPristine();
     		Authn.signup(vm.signupForm).then(
     			function(response) {
     				vm.id = response.data.data.id;
@@ -32,6 +33,7 @@
     				$state.go("home");
     			},
     			function(response){
+                    vm.signupForm["errors"]=response.data.errors;
     				console.log("signup failure", response, vm);
     			}
     			);
