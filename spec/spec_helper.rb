@@ -21,6 +21,7 @@ require_relative 'support/database_cleaners.rb'
 require_relative 'support/api_helper.rb'
 require_relative 'support/ui_helper.rb'
 
+
 browser=:chrome
 Capybara.register_driver :selenium do |app|
   if ENV['SELENIUM_REMOTE_HOST']
@@ -57,11 +58,12 @@ Capybara.configure do |config|
   config.default_driver = :rack_test
   #used when :js=>true
   config.javascript_driver = :poltergeist
-#  config.javascript_driver = :selenium
 end
+#Capybara.javascript_driver = :selenium
 
 Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new( app,
+    js_errors: false,
     phantomjs_logger: StringIO.new,
 #    logger: STDERR
     )
