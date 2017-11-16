@@ -1,0 +1,39 @@
+{
+  "name": "rails-assets-angular-cookie",
+  "downloads": null,
+  "version": "4.1.0",
+  "version_downloads": null,
+  "platform": "ruby",
+  "authors": "rails-assets.org",
+  "info": "angular module for accessing browser cookies",
+  
+  "licenses": "MIT",
+  
+  "metadata": {
+
+  },
+  "sha": null,
+  "project_uri": "https://github.com/ivpusic/angular-cookie",
+  "gem_uri": null,
+  "homepage_uri": "https://github.com/ivpusic/angular-cookie",
+  "wiki_uri": null,
+  "documentation_uri": null,
+  "mailing_list_uri": null,
+  "source_code_uri": "https://github.com/ivpusic/angular-cookie",
+  "bug_tracker_uri": null,
+  "dependencies": {
+    "development": [
+    
+    
+    {
+      "name": "rails-assets-angular",
+      "requirements": ">= 0"
+    },
+    
+    
+    ],
+    "runtime": [
+
+    ]
+  }
+}
