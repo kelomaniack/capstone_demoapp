@@ -1,0 +1,46 @@
+{
+  "name": "rails-assets-ng-token-auth",
+  "downloads": null,
+  "version": "0.0.30",
+  "version_downloads": null,
+  "platform": "ruby",
+  "authors": "rails-assets.org",
+  "info": "Token based authentication system for angular js. Includes support for oauth2 authentication using Facebook, Github, and Google.",
+  
+  "licenses": "MIT",
+  
+  "metadata": {
+
+  },
+  "sha": null,
+  "project_uri": "http://github.com/lynndylanhurley/ng-token-auth",
+  "gem_uri": null,
+  "homepage_uri": "http://github.com/lynndylanhurley/ng-token-auth",
+  "wiki_uri": null,
+  "documentation_uri": null,
+  "mailing_list_uri": null,
+  "source_code_uri": "http://github.com/lynndylanhurley/ng-token-auth",
+  "bug_tracker_uri": null,
+  "dependencies": {
+    "development": [
+    
+    
+    {
+      "name": "rails-assets-angular",
+      "requirements": ">= 1.4", "< 1.6.0"
+    },
+    
+    
+    
+    {
+      "name": "rails-assets-angular-cookie",
+      "requirements": "~> 4.1.0"
+    },
+    
+    
+    ],
+    "runtime": [
+
+    ]
+  }
+}

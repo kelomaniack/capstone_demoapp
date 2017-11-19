@@ -1,0 +1,13 @@
+current directory: /Users/admin/Documents/Documents2/coursera/Capstone Photo Tourist Web Application/capstone_demoapp/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+/Users/admin/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20171119-2560-x71yvd.rb extconf.rb
+creating Makefile
+
+current directory: /Users/admin/Documents/Documents2/coursera/Capstone Photo Tourist Web Application/capstone_demoapp/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/admin/Documents/Documents2/coursera/Capstone Photo Tourist Web Application/capstone_demoapp/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/admin/Documents/Documents2/coursera/Capstone Photo Tourist Web Application/capstone_demoapp/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
