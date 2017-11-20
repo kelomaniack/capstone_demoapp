@@ -10,7 +10,6 @@
                             "spa-demo.config.APP_CONFIG"];
 
   function RouterFunction($stateProvider, $urlRouterProvider, APP_CONFIG) {
-    
     $stateProvider
     .state("home",{
       url: "/",
@@ -34,10 +33,7 @@
       url: "/things/:id",
       templateUrl: APP_CONFIG.things_page_html
     })
-    .state("inquiries", {
-      url: "inquiries/:id",
-      templateUrl: APP_CONFIG.inquiries_page_html
-    }); 
+    ; 
 
     //$urlRouterProvider.otherwise("/"); eliminate default route
   }
