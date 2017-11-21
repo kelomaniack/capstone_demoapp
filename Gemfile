@@ -17,7 +17,7 @@ gem 'jquery-rails', '~>4.2', '>=4.2.1'
 gem 'jbuilder', '~> 2.0', '>=2.6.0'
 
 group :development do
-  gem 'spring', '~>2.0', '>=2.0.0'
+#  gem 'spring', '~>2.0', '>=2.0.0'
 end
 
 group :development, :test do
