@@ -182,7 +182,6 @@ RSpec.describe "ImageContent", type: :model do
         expect(props[:image_content].class).to eq(Hash)
         expect(props[:image_content]).to include(:content_type,:content)
         expect(props[:image_content][:content_type]).to eq("image/jpg")
-      #  pp props
       end
       it "builds Image with content" do
         image=FactoryGirl.build(:image)
@@ -207,7 +206,6 @@ RSpec.describe "ImageContent", type: :model do
       expect(ImageContent.image(image).count).to eq(5)
       expect(ImageContent.image(image).where(:original=>true).count).to eq(1)
       expect(ImageContent.image(image).not.where(:original=>true).count).to eq(4)
-     # binding.pry
     end
 
     it "creates for Image with ImageContent" do

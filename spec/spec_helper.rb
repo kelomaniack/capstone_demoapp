@@ -22,7 +22,7 @@ require_relative 'support/api_helper.rb'
 require_relative 'support/ui_helper.rb'
 
 
-browser=:chrome
+browser=:firefox
 Capybara.register_driver :selenium do |app|
   if ENV['SELENIUM_REMOTE_HOST']
     # https://medium.com/@georgediaz/docker-container-for-running-browser-tests-9b234e68f83c#.l7i6yay23
@@ -48,7 +48,11 @@ Capybara.register_driver :selenium do |app|
       #set FIREFOX_BINARY_PATH=c:\Program Files\Mozilla Firefox\firefox.exe
       Selenium::WebDriver::Firefox::Binary.path=ENV['FIREFOX_BINARY_PATH']
     end
-    Capybara::Selenium::Driver.new(app, :browser=>:firefox)
+    #http://stackoverflow.com/questions/20009266/selenium-testing-with-geolocate-firefox-keeps-turning-it-off
+    profile = Selenium::WebDriver::Firefox::Profile.new
+    profile["geo.prompt.testing"]=true
+    profile["geo.prompt.testing.allow"]=true
+    Capybara::Selenium::Driver.new(app, :browser=>:firefox, :profile=>profile)
   end
 end
 
@@ -86,6 +90,13 @@ RSpec.configure do |config|
   config.include ApiHelper, :type=>:request
   config.include UiHelper, :type=>:feature
 
+  config.before(:each, js: true) do
+    #Capybara.page.driver.browser.manage.window.maximize
+    if !ENV['SELENIUM_REMOTE_HOST'] || Capybara.javascript_driver = :poltergeist
+      Capybara.page.current_window.resize_to(1050, 800)
+    end
+  end
+  
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

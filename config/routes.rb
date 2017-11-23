@@ -17,6 +17,9 @@ Rails.application.routes.draw do
       resources :thing_images, only: [:index, :create, :update, :destroy]
     end
     get "images/:id/content", as: :image_content, controller: :images, action: :content, defaults:{format: :jpg}
+    get 'geocoder/addresses' => "geocoder#addresses"
+    get 'geocoder/positions' => "geocoder#positions"
+    get 'subjects' => "thing_images#subjects"
   end      
 
   get "/client-assets/:name.:format", :to => redirect("/client/client-assets/%{name}.%{format}")

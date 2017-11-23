@@ -270,7 +270,6 @@ RSpec.describe "ImageContents", type: :request do
 
     it "issues content if-none-match" do
       get image_content_url(@image)
-      pp response.header
       expect(response).to have_http_status(:ok)
       expect(response.body.size).to eq(ic.content.data.size)
 

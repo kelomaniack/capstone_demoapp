@@ -9,6 +9,7 @@ gem 'devise_token_auth', '~>0.1', '>=0.1.39'
 gem 'pundit', '~>1.1', '>=1.1.0'
 gem 'exifr', '~> 1.2', '>= 1.2.5'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'geokit-rails', '~>2.2', '>= 2.2.0'
 
 gem 'sass-rails', '~> 5.0', '>=3.4.22'
 gem 'uglifier', '~> 3.0', '>=3.0.2'
@@ -17,7 +18,7 @@ gem 'jquery-rails', '~>4.2', '>=4.2.1'
 gem 'jbuilder', '~> 2.0', '>=2.6.0'
 
 group :development do
-#  gem 'spring', '~>2.0', '>=2.0.0'
+  gem 'spring', '~>2.0', '>=2.0.0'
 end
 
 group :development, :test do
