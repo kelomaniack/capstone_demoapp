@@ -1,0 +1,39 @@
+{
+  "name": "rails-assets-ui-cropper",
+  "downloads": null,
+  "version": "1.0.6",
+  "version_downloads": null,
+  "platform": "ruby",
+  "authors": "rails-assets.org",
+  "info": "Image crop directive for AngularJS, square, circle and rectangle areas. Working with aspects.",
+  
+  "licenses": "MIT",
+  
+  "metadata": {
+
+  },
+  "sha": null,
+  "project_uri": "https://crackerakiua.github.io/ui-cropper",
+  "gem_uri": null,
+  "homepage_uri": "https://crackerakiua.github.io/ui-cropper",
+  "wiki_uri": null,
+  "documentation_uri": null,
+  "mailing_list_uri": null,
+  "source_code_uri": "https://crackerakiua.github.io/ui-cropper",
+  "bug_tracker_uri": null,
+  "dependencies": {
+    "development": [
+    
+    
+    {
+      "name": "rails-assets-angular",
+      "requirements": ">= 1.4.0"
+    },
+    
+    
+    ],
+    "runtime": [
+
+    ]
+  }
+}

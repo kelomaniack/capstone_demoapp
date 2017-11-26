@@ -1,0 +1,46 @@
+{
+  "name": "rails-assets-ng-file-upload-shim",
+  "downloads": null,
+  "version": "12.2.13",
+  "version_downloads": null,
+  "platform": "ruby",
+  "authors": "rails-assets.org",
+  "info": "shim for ng-file-upload for non html5 browsers IE8-9",
+  
+  "licenses": "MIT",
+  
+  "metadata": {
+
+  },
+  "sha": null,
+  "project_uri": "https://github.com/danialfarid/ng-file-upload",
+  "gem_uri": null,
+  "homepage_uri": "https://github.com/danialfarid/ng-file-upload",
+  "wiki_uri": null,
+  "documentation_uri": null,
+  "mailing_list_uri": null,
+  "source_code_uri": "https://github.com/danialfarid/ng-file-upload",
+  "bug_tracker_uri": null,
+  "dependencies": {
+    "development": [
+    
+    
+    {
+      "name": "rails-assets-angular",
+      "requirements": "> 1.2.0"
+    },
+    
+    
+    
+    {
+      "name": "rails-assets-ng-file-upload",
+      "requirements": "> 6.0.3"
+    },
+    
+    
+    ],
+    "runtime": [
+
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "rails-assets-ng-file-upload",
+  "downloads": null,
+  "version": "12.2.13",
+  "version_downloads": null,
+  "platform": "ruby",
+  "authors": "rails-assets.org",
+  "info": "Lightweight Angular JS directive to upload files. Support drag&drop, paste image, progress and abort",
+  
+  "licenses": "MIT",
+  
+  "metadata": {
+
+  },
+  "sha": null,
+  "project_uri": "https://github.com/danialfarid/ng-file-upload",
+  "gem_uri": null,
+  "homepage_uri": "https://github.com/danialfarid/ng-file-upload",
+  "wiki_uri": null,
+  "documentation_uri": null,
+  "mailing_list_uri": null,
+  "source_code_uri": "https://github.com/danialfarid/ng-file-upload",
+  "bug_tracker_uri": null,
+  "dependencies": {
+    "development": [
+    
+    
+    {
+      "name": "rails-assets-angular",
+      "requirements": "> 1.2.0"
+    },
+    
+    
+    ],
+    "runtime": [
+
+    ]
+  }
+}
