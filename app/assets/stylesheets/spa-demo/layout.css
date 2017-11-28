@@ -14,6 +14,9 @@ form .invalid {
   padding-right: 0px;
   padding-left: 0px;
 }
+.outlined {
+  border: 1px solid black;
+}
 
 /*********** navbar *************/
 
