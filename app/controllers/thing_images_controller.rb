@@ -42,7 +42,6 @@ class ThingImagesController < ApplicationController
     state="#{request.headers['QUERY_STRING']}:#{last_modified}"
     #use eTag versus last_modified -- ng-token-auth munges if-modified-since
     eTag="#{Digest::MD5.hexdigest(state)}"
-    pp state 
 
     if stale?  :etag=>eTag
       @thing_images=ThingImage.within_range(@origin, miles, reverse)

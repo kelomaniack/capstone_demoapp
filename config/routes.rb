@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'geocoder/addresses'
-
-  get 'geocoder/positions'
-
   get 'authn/whoami', defaults: {format: :json}
   get 'authn/checkme'
 

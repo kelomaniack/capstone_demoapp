@@ -330,8 +330,6 @@ RSpec.describe "Geocoders", type: :request do
       it "provides cache re-validation unmodified" do
         jget subjects_path, {miles:@distance,distance:true}.merge(@origin.to_hash),
                             {"IF-NONE-MATCH"=>@starting_eTag}
-        pp response.headers
-
         expect(response).to have_http_status(:not_modified)
         expect(response.headers["ETag"]).to eq(@starting_eTag)
       end
