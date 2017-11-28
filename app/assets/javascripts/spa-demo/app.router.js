@@ -12,8 +12,8 @@
   function RouterFunction($stateProvider, $urlRouterProvider, APP_CONFIG) {
     $stateProvider
     .state("home",{
-      url: "/",
-      templateUrl: APP_CONFIG.main_page_html,
+      url: "/subjects",
+      templateUrl: APP_CONFIG.subjects_page_html
       // controller: ,
       // controllerAs: ,
     })
@@ -32,10 +32,6 @@
     .state("things",{
       url: "/things/:id",
       templateUrl: APP_CONFIG.things_page_html
-    })
-    .state("subjects",{
-      url: "/subjects",
-      templateUrl: APP_CONFIG.subjects_page_html
     })
     ; 
 
