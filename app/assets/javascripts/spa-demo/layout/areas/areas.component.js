@@ -52,7 +52,7 @@
     vm.areasRight = [];
 
     vm.$onInit = function() {
-      console.log("AreasController",$scope);
+      //console.log("AreasController",$scope);
     }
     return;
     //////////////
@@ -117,7 +117,7 @@
     /////////////////
     function isHidden(position) {
       var result=vm.areas.countActive(position)===0;  
-      console.log("isHidden", position, result);
+      //console.log("isHidden", position, result);
       return result;
     }
   }
