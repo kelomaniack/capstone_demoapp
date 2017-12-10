@@ -167,7 +167,8 @@ module SubjectsUiHelper
     within("sd-area[label='Map']") do #make some Thing current
       find("div.tabs-pane ul li a", :text=>"Things").click
       id=find("div.tabs-pane ul.things li.selected span.thing_id",
-                                                visible:false).text(:all)
+                                                visible:false,
+                                                wait:5).text(:all)
       id.to_i   if id
     end
   end
@@ -185,5 +186,11 @@ module SubjectsUiHelper
                                                 visible:false).text(:all)
       id.to_i   if id
     end
+  end
+
+  def subjects_map_loaded!
+    expect(page).to have_css("div#map")
+    #wait for the map to appear
+    expect(page).to have_css("div#map div.gm-style",:wait=>10)
   end
 end

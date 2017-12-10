@@ -4,7 +4,7 @@ namespace :ptourist do
   ORIGINATORS=["carol","alice"]
   BOYS=["greg","peter","bobby"]
   GIRLS=["marsha","jan","cindy"]
-  BASE_URL="https://dev9.jhuep.com/fullstack-capstone"
+  BASE_URL="http://dev9.jhuep.com/fullstack-capstone"
 
   def user_name first_name
     last_name = (first_name=="alice") ? "nelson" : "brady"
@@ -340,8 +340,8 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     organizer=get_user("alice")
     image= {:path=>"db/bta/skyline_water_level.jpg",
      :caption=>"Skyline Water Level",
-     :lng=>-76.6284366, 
-     :lat=>39.2780493
+     :lng=>-76.606205,
+     :lat=>39.281114
      }
     create_image organizer, image
 
