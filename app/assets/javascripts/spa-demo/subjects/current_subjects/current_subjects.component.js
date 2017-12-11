@@ -1,4 +1,4 @@
-(function() {
+  (function() {
   "use strict";
 
   angular
@@ -168,7 +168,7 @@
     var lat = location && location.position ? location.position.lat : "";
     var html = [
       "<div class='origin'>",
-        "<div class='full_address'>"+ full_address + "</div>",
+        "<div class='full_address'>"+ full_address + "</div>", 
         "<div class='position'>",
           "lng: <span class='lng'>"+ lng +"</span>",
           "lat: <span class='lat'>"+ lat +"</span>",
